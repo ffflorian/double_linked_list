@@ -8,5 +8,21 @@ fn create_list() {
 
 #[test]
 fn create_element() {
-  ListElement::new("".to_string());
+  let element = ListElement::new("hello".to_string());
+  assert_eq!(element.get_value(), "hello");
+}
+
+#[test]
+fn set_value() {
+  let mut element = ListElement::new("".to_string());
+  assert_eq!(element.get_value(), "");
+  &mut element.set_value("changed".to_string());
+  assert_eq!(element.get_value(), "changed");
+}
+
+#[test]
+fn get_elements() {
+  let element = ListElement::new("hello".to_string());
+  assert_eq!(element.get_next().is_none(), true);
+  assert_eq!(element.get_prev().is_none(), true);
 }
