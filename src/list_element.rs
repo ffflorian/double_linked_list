@@ -6,5 +6,11 @@ pub struct ListElement {
 }
 
 impl ListElement {
-
+  pub fn new(value: String) -> ListElement {
+    ListElement {
+      value: value,
+      next: None,
+      prev: None
+    }
+  }
 }

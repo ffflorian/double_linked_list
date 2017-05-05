@@ -1,3 +1,12 @@
+use linked_list::LinkedList;
+use list_element::ListElement;
+
 #[test]
-fn it_works() {
+fn create_list() {
+  LinkedList::new();
+}
+
+#[test]
+fn create_element() {
+  ListElement::new("".to_string());
 }
