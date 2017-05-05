@@ -1,5 +1,7 @@
 ## double_linked_list
 
+![build status](https://api.travis-ci.org/ffflorian/double_linked_list.svg?branch=master)
+
 A linked list in which every element knows about its predecessor and its successor.
 ```
  ______     ______     ______
@@ -14,8 +16,8 @@ A linked list in which every element knows about its predecessor and its success
 ```rust
 extern crate double_linked_list;
 
-use linked_list::LinkedList;
-use list_element::ListElement;
+use double_linked_list::LinkedList;
+use double_linked_list::ListElement;
 
 let list = LinkedList::new();
 let element = ListElement::new("hello");
