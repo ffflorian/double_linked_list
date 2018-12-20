@@ -1,6 +1,7 @@
 ## double_linked_list
 
-![build status](https://api.travis-ci.org/ffflorian/double_linked_list.svg?branch=master)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/double_linked_list)](https://dependabot.com)
+
 
 A linked list in which every element knows about its predecessor and its successor.
 ```
