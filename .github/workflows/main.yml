@@ -1,0 +1,14 @@
+name: Push
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: docker://rust:1.31.0
+      - run: cargo test
+        if: |
+          contains(github.event.commits[0].message, '[skip ci]') == false &&
+          contains(github.event.commits[0].message, '[ci skip]') == false
