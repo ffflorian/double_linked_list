@@ -1,14 +1,17 @@
-name: Push
+name: Build and test
 
-on: push
+on: [push, pull_request]
 
 jobs:
-  build:
+  build_test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: docker://rust:1.31.0
-      - run: cargo test
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Build and test
+        run: |
+          cargo build --verbose
+          cargo test --verbose
         if: |
           contains(github.event.commits[0].message, '[skip ci]') == false &&
           contains(github.event.commits[0].message, '[ci skip]') == false
