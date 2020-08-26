@@ -1,8 +1,5 @@
 ## double_linked_list
 
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/double_linked_list)](https://dependabot.com)
-
-
 A linked list in which every element knows about its predecessor and its successor.
 ```
  ______     ______     ______
