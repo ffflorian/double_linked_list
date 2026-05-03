@@ -16,3 +16,5 @@ updates:
       - ffflorian
     cooldown:
       default-days: 5
+      exclude:
+        - 'ffflorian/*'
